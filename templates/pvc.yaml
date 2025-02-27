@@ -23,7 +23,7 @@ metadata:
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
 spec:
   accessModes:
-    - ReadWriteMany
+    {{- toYaml .Values.accessModes | nindent 2 }}
   resources:
     requests:
       storage: {{ .Values.storage }}

@@ -99,6 +99,9 @@ affinity: {}
 # type of storage pvc, directVolume -defaults to emptyDir
 storageType: emptyDir
 
+accessModes:
+  - ReadWriteMany
+
 # example pvc values
 # storage: "500Mi"
 # storageClassName: ""

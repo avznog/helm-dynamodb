@@ -23,7 +23,7 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   {{- if .Values.service.externalName }}
-  externalName: {{ .Values.service.externalName | quote }}
+  externalName: {{ .Values.service.externalName | quote }}
   {{- end }}
   ports:
     - port: 8000
