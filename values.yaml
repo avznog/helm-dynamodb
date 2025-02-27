@@ -55,7 +55,11 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  enabled: true
+  type: ClusterIP # Can be ClusterIP or ExternalName
+  
+  # If type: ExternalName
+  # externalName: ""
 
 ingress:
   enabled: false
